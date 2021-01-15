@@ -1,0 +1,43 @@
+body{
+    /*초기화 하기 (브라우저 별로 기본적으로 지정해놓은 마진이나 패딩이 존재한다.)*/
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    /*기본적으로 width와 height가 지정되어 있음
+    width: auto; >> 100%
+    height: auto; >> 안에 내용물에 따라 자동적으로 0에서 부터 늘어남  */
+    background: white;
+    border-bottom: 1px solid lightgray;
+
+}
+.container{
+    width: 980px;
+    /*margin: auto; >> 980px만큼의 영역이 가운데로 오게끔 해주는 속성 (수평정렬)*/
+    margin: auto;
+}
+.container-left{
+    padding: 20px 0px;
+}
+.logo{
+    float: left;
+    margin-right: 5px;
+}
+.logo img{
+    /*.logo img >> logo 안에 있는 img 태그를 찾아서 적용하라는 의미 / 하나하나 다 class를 지정해서 줄 수 없으니까!*/
+    /*display: block; >> 이미지를 불러오게 되면 의도치않은 공간이 생길 수 있는데, 이 문제점을 해결해 줌.*/
+    display: block;
+}
+.menu{
+    float: left;
+
+}
+.menu-item{
+    float: left;
+    padding: 8px 10px; /*8px = top, bottom / 10px = left, right*/
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
